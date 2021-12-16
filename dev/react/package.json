@@ -3,6 +3,8 @@
   "version": "0.1.5",
   "private": true,
   "dependencies": {
+    "@garfish/bridge": "workspace:*",
+    "@hot-loader/react-dom": "^17.0.1",
     "@testing-library/jest-dom": "5.15.0",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "13.3.0",
@@ -11,10 +13,10 @@
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.6",
     "react-dom": "^16.13.1",
+    "react-hot-loader": "^4.13.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "react-shadow-dom-retarget-events": "^1.0.11",
-    "@garfish/bridge": "workspace:*"
+    "react-shadow-dom-retarget-events": "^1.0.11"
   },
   "scripts": {
     "start": "WDS_SOCKET_PORT=2444 PORT=2444 BROWSER=none react-app-rewired start",

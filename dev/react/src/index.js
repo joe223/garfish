@@ -1,3 +1,4 @@
+import 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
@@ -14,6 +15,7 @@ import { reactBridge } from '@garfish/bridge';
 //   );
 // };
 
+console.log(React);
 export const provider = reactBridge({
   React,
   ReactDOM,

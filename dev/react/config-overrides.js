@@ -16,6 +16,7 @@ module.exports = {
         banner: '/* empty */\n',
       }),
     );
+    config.resolve.alias['react-dom'] = '@hot-loader/react-dom';
     return config;
   },
 

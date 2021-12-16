@@ -178,6 +178,7 @@ importers:
   dev/react:
     specifiers:
       '@garfish/bridge': workspace:*
+      '@hot-loader/react-dom': ^17.0.1
       '@testing-library/jest-dom': 5.15.0
       '@testing-library/react': ^9.3.2
       '@testing-library/user-event': 13.3.0
@@ -186,11 +187,13 @@ importers:
       react: ^16.13.1
       react-app-rewired: ^2.1.6
       react-dom: ^16.13.1
+      react-hot-loader: ^4.13.0
       react-router-dom: ^5.2.0
       react-scripts: 3.4.1
       react-shadow-dom-retarget-events: ^1.0.11
     dependencies:
       '@garfish/bridge': link:../../packages/bridge
+      '@hot-loader/react-dom': 17.0.1_react@16.14.0
       '@testing-library/jest-dom': 5.15.0
       '@testing-library/react': 9.5.0_react-dom@16.14.0+react@16.14.0
       '@testing-library/user-event': 13.3.0
@@ -199,6 +202,7 @@ importers:
       react: 16.14.0
       react-app-rewired: 2.1.8_react-scripts@3.4.1
       react-dom: 16.14.0_react@16.14.0
+      react-hot-loader: 4.13.0_react-dom@16.14.0+react@16.14.0
       react-router-dom: 5.3.0_react@16.14.0
       react-scripts: 3.4.1_typescript@4.4.3
       react-shadow-dom-retarget-events: 1.1.0
@@ -5641,6 +5645,17 @@ packages:
     dependencies:
       '@hapi/hoek': 9.2.0
 
+  /@hot-loader/react-dom/17.0.1_react@16.14.0:
+    resolution: {integrity: sha512-QttzEibkIFkl/WV1dsLXg73YIweNo9ySbB0/26068RqFGWyv7pKyictWsaQXqSj1y66/BDn3kglCHgroGrv3vA==}
+    peerDependencies:
+      react: 17.0.1
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react: 16.14.0
+      scheduler: 0.20.2
+    dev: false
+
   /@humanwhocodes/config-array/0.5.0:
     resolution: {integrity: sha512-FagtKFz74XrTl7y6HCzQpwDfXP0yhxe9lHLD1UZxjvZIcbyRz8zTFF/yYNfSfzU414eDwZ1SrO0Qvtyf+wFMQg==}
     engines: {node: '>=10.10.0'}
@@ -9030,7 +9045,7 @@ packages:
       loader-utils: 1.4.0
       make-dir: 3.1.0
       schema-utils: 2.7.1
-      webpack: 4.46.0_webpack-cli@3.3.12
+      webpack: 4.46.0
 
   /babel-loader/8.2.2_bc5a77be236f8c9ab8958078649c687f:
     resolution: {integrity: sha512-JvTd0/D889PQBtUXJ2PXaKU/pjZDMtHA9V2ecm+eNRmmBCMR09a+fmpGTNwnJtFmFl5Ei7Vy47LjBb+L0wQ99g==}
@@ -10897,7 +10912,7 @@ packages:
       postcss-value-parser: 4.1.0
       schema-utils: 2.7.1
       semver: 6.3.0
-      webpack: 4.46.0_webpack-cli@3.3.12
+      webpack: 4.46.0
 
   /css-loader/5.2.7_webpack@5.64.3:
     resolution: {integrity: sha512-Q7mOvpBNBG7YrVGMxRxcBJZFL75o+cH2abNASdibkj/fffYD8qWbInZrD0S9ccI6vZclF3DsHE7njGlLtaHbhg==}
@@ -11681,7 +11696,7 @@ packages:
       entities: 2.2.0
 
   /dom-walk/0.1.2:
-    resolution: {integrity: sha1-DFSL7wSPTR8qlySQAiNgYNqj/YQ=}
+    resolution: {integrity: sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==}
     dev: false
 
   /dom7/3.0.0:
@@ -11853,7 +11868,7 @@ packages:
     engines: {node: '>= 0.10'}
 
   /emojis-list/3.0.0:
-    resolution: {integrity: sha1-VXBmIEatKeLpFucariYKvf9Pang=}
+    resolution: {integrity: sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==}
     engines: {node: '>= 4'}
 
   /emoticon/3.2.0:
@@ -13488,7 +13503,7 @@ packages:
     optional: true
 
   /fsevents/2.1.2:
-    resolution: {integrity: sha1-TAofs0vGjlQ7S4Kp7Dkr+9qECAU=}
+    resolution: {integrity: sha512-R4wDiBwZ0KzpgOWetKDug1FZcYhqYnUYKtfZYt4mD5SBz76q0KR4Q9o7GIPamsVPGmW3EYPPJ0dOOjvx32ldZA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     deprecated: '"Please update to latest v2.3 or v2.2"'
@@ -13726,7 +13741,7 @@ packages:
       which: 1.3.1
 
   /global/4.4.0:
-    resolution: {integrity: sha1-PnsQUXkAajI+1xqvyj6cV6XMZAY=}
+    resolution: {integrity: sha512-wv/LAoHdRE3BeTGz53FAamhGlPLhlssK45usmGFThIi4XqnBmjKQ16u+RNbP7WvigRZDxUsM0J3gcQ5yicaL0w==}
     dependencies:
       min-document: 2.19.0
       process: 0.11.10
@@ -14210,7 +14225,7 @@ packages:
       tapable: 1.1.3
       toposort: 1.0.7
       util.promisify: 1.0.0
-      webpack: 4.46.0_webpack-cli@3.3.12
+      webpack: 4.46.0
 
   /html-webpack-plugin/4.0.0-beta.11_webpack@4.42.0:
     resolution: {integrity: sha512-4Xzepf0qWxf8CGg7/WQM5qBB2Lc/NFI7MhU59eUDTkuQp3skZczH4UA1d6oQyDEIoMDgERVhRyTdtUPZ5s5HBg==}
@@ -16969,7 +16984,7 @@ packages:
     engines: {node: '>= 0.6.0'}
 
   /loose-envify/1.4.0:
-    resolution: {integrity: sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=}
+    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
@@ -20653,6 +20668,29 @@ packages:
       react-side-effect: 2.1.1_react@16.14.0
     dev: false
 
+  /react-hot-loader/4.13.0_react-dom@16.14.0+react@16.14.0:
+    resolution: {integrity: sha512-JrLlvUPqh6wIkrK2hZDfOyq/Uh/WeVEr8nc7hkn2/3Ul0sx1Kr5y4kOGNacNRoj7RhwLNcQ3Udf1KJXrqc0ZtA==}
+    engines: {node: '>= 6'}
+    peerDependencies:
+      '@types/react': '^15.0.0 || ^16.0.0 || ^17.0.0 '
+      react: '^15.0.0 || ^16.0.0 || ^17.0.0 '
+      react-dom: '^15.0.0 || ^16.0.0 || ^17.0.0 '
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      fast-levenshtein: 2.0.6
+      global: 4.4.0
+      hoist-non-react-statics: 3.3.2
+      loader-utils: 1.4.0
+      prop-types: 15.7.2
+      react: 16.14.0
+      react-dom: 16.14.0_react@16.14.0
+      react-lifecycles-compat: 3.0.4
+      shallowequal: 1.1.0
+      source-map: 0.7.3
+    dev: false
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
@@ -21546,6 +21584,13 @@ packages:
 
   /scheduler/0.19.1:
     resolution: {integrity: sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==}
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+    dev: false
+
+  /scheduler/0.20.2:
+    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
@@ -24055,7 +24100,7 @@ packages:
       mime: 2.5.2
       mkdirp: 0.5.5
       range-parser: 1.2.1
-      webpack: 4.46.0_webpack-cli@3.3.12
+      webpack: 4.46.0
       webpack-log: 2.0.0
 
   /webpack-dev-middleware/5.2.2_webpack@5.64.3:
